@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinMacApp", "XamarinMacApp\XamarinMacApp.csproj", "{C0EA472F-6635-4346-86FC-0A60528040AC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0EA472F-6635-4346-86FC-0A60528040AC}.Debug|x86.ActiveCfg = Debug|x86
+		{C0EA472F-6635-4346-86FC-0A60528040AC}.Debug|x86.Build.0 = Debug|x86
+		{C0EA472F-6635-4346-86FC-0A60528040AC}.Release|x86.ActiveCfg = Release|x86
+		{C0EA472F-6635-4346-86FC-0A60528040AC}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal
