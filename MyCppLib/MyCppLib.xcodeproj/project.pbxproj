@@ -11,6 +11,7 @@
 		D062B65A1ED58CE600E0DE69 /* MyCppLibPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D062B6591ED58CE600E0DE69 /* MyCppLibPriv.hpp */; };
 		D062B65C1ED58CE600E0DE69 /* MyCppLib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D062B65B1ED58CE600E0DE69 /* MyCppLib.cpp */; };
 		D062B6631ED58DAD00E0DE69 /* libMyCppLib.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = D062B6541ED58CE600E0DE69 /* libMyCppLib.a */; };
+		D062B6651ED59C5200E0DE69 /* MyCppLibPriv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D062B6641ED59C5200E0DE69 /* MyCppLibPriv.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,10 +32,20 @@
 		D062B6571ED58CE600E0DE69 /* MyCppLib.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MyCppLib.hpp; sourceTree = "<group>"; };
 		D062B6591ED58CE600E0DE69 /* MyCppLibPriv.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MyCppLibPriv.hpp; sourceTree = "<group>"; };
 		D062B65B1ED58CE600E0DE69 /* MyCppLib.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MyCppLib.cpp; sourceTree = "<group>"; };
+		D062B6641ED59C5200E0DE69 /* MyCppLibPriv.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyCppLibPriv.cpp; sourceTree = "<group>"; };
+		D062B66A1ED59CDF00E0DE69 /* MyCppBundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCppBundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D062B66C1ED59CDF00E0DE69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D062B6511ED58CE600E0DE69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D062B6671ED59CDF00E0DE69 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -48,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				D062B6561ED58CE600E0DE69 /* MyCppLib */,
+				D062B66B1ED59CDF00E0DE69 /* MyCppBundle */,
 				D062B6551ED58CE600E0DE69 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				D062B6541ED58CE600E0DE69 /* libMyCppLib.a */,
+				D062B66A1ED59CDF00E0DE69 /* MyCppBundle.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,11 +76,20 @@
 		D062B6561ED58CE600E0DE69 /* MyCppLib */ = {
 			isa = PBXGroup;
 			children = (
-				D062B6571ED58CE600E0DE69 /* MyCppLib.hpp */,
 				D062B6591ED58CE600E0DE69 /* MyCppLibPriv.hpp */,
+				D062B6641ED59C5200E0DE69 /* MyCppLibPriv.cpp */,
+				D062B6571ED58CE600E0DE69 /* MyCppLib.hpp */,
 				D062B65B1ED58CE600E0DE69 /* MyCppLib.cpp */,
 			);
 			path = MyCppLib;
+			sourceTree = "<group>";
+		};
+		D062B66B1ED59CDF00E0DE69 /* MyCppBundle */ = {
+			isa = PBXGroup;
+			children = (
+				D062B66C1ED59CDF00E0DE69 /* Info.plist */,
+			);
+			path = MyCppBundle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,6 +125,23 @@
 			productReference = D062B6541ED58CE600E0DE69 /* libMyCppLib.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		D062B6691ED59CDF00E0DE69 /* MyCppBundle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D062B66D1ED59CE000E0DE69 /* Build configuration list for PBXNativeTarget "MyCppBundle" */;
+			buildPhases = (
+				D062B6661ED59CDF00E0DE69 /* Sources */,
+				D062B6671ED59CDF00E0DE69 /* Frameworks */,
+				D062B6681ED59CDF00E0DE69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyCppBundle;
+			productName = MyCppBundle;
+			productReference = D062B66A1ED59CDF00E0DE69 /* MyCppBundle.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -113,6 +152,10 @@
 				ORGANIZATIONNAME = Abc;
 				TargetAttributes = {
 					D062B6531ED58CE600E0DE69 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+					D062B6691ED59CDF00E0DE69 = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -131,16 +174,35 @@
 			projectRoot = "";
 			targets = (
 				D062B6531ED58CE600E0DE69 /* MyCppLib */,
+				D062B6691ED59CDF00E0DE69 /* MyCppBundle */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D062B6681ED59CDF00E0DE69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D062B6501ED58CE600E0DE69 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D062B6651ED59C5200E0DE69 /* MyCppLibPriv.cpp in Sources */,
 				D062B65C1ED58CE600E0DE69 /* MyCppLib.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D062B6661ED59CDF00E0DE69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,20 +301,66 @@
 		D062B6601ED58CE600E0DE69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GENERATE_MASTER_OBJECT_FILE = YES;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SEPARATE_STRIP = NO;
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
 			};
 			name = Debug;
 		};
 		D062B6611ED58CE600E0DE69 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GENERATE_MASTER_OBJECT_FILE = YES;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SEPARATE_STRIP = NO;
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+			};
+			name = Release;
+		};
+		D062B66E1ED59CE000E0DE69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MyCppBundle/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = Abc.MyCppBundle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		D062B66F1ED59CE000E0DE69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MyCppBundle/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = Abc.MyCppBundle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -273,6 +381,14 @@
 			buildConfigurations = (
 				D062B6601ED58CE600E0DE69 /* Debug */,
 				D062B6611ED58CE600E0DE69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D062B66D1ED59CE000E0DE69 /* Build configuration list for PBXNativeTarget "MyCppBundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D062B66E1ED59CE000E0DE69 /* Debug */,
+				D062B66F1ED59CE000E0DE69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
