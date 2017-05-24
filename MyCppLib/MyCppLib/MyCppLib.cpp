@@ -7,23 +7,15 @@
  *
  */
 
-#include <iostream>
+
+
+
 #include "MyCppLib.hpp"
-#include "MyCppLibPriv.hpp"
-
-void MyCppLib::HelloWorld(const char * s)
-{
-    MyCppLibPriv *theObj = new MyCppLibPriv;
-    theObj->HelloWorldPriv(s);
-    delete theObj;
-};
-
-void MyCppLibPriv::HelloWorldPriv(const char * s) 
-{
-    std::cout << s << std::endl;
-};
-
 
 int my_C_Function() {
     return 9999;
+}
+
+int my_second_C_Function() {
+    return 2222;
 }
