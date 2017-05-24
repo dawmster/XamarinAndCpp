@@ -1,11 +1,13 @@
 # Xamarin And C++
 This is an attempt at using C++ library (.a) in Visual Studio for Mac (a.k.a. Xamarin)
 
-MyCppLib - XCode project
-XamarinMacApp - Visual Studio For Mac solution
-libMyCppLib.a - that is a product of MyCppLib (last build step copies the product here, and XamarinMacApp references it)
+### Contents
+1) MyCppLib - XCode project
+1) XamarinMacApp - Visual Studio For Mac solution
+1) libMyCppLib.a - that is a product of MyCppLib (last build step copies the product here, and XamarinMacApp references it)
 
-MyCppLib compiles fine and produces libMyCppLib.a
+## What is ok
+*MyCppLib* compiles fine and produces libMyCppLib.a
 I intended to export only two C functions (my_C_Function, my_second_C_Function).
 But I am unable to strip other sybols - which seems to be root of the problem
 
@@ -16,8 +18,10 @@ But I am unable to strip other sybols - which seems to be root of the problem
     }
 ```
 
-   
-XamarinMacApp - does not compile with following error :
+## What's not ok   
+### XamarinMacApp - does not compile with following error :
+Notice that C functions ( my_C_Function, my_second_C_Function is not listed in error below).
+It seems only C++ Standard Library cannot be linked.
 
 ```
 
